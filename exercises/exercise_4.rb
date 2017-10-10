@@ -32,3 +32,8 @@ Yaletown.save
 @mens_stores.each do |store|
   puts "#{store.name} has an annual revenue of #{store.annual_revenue}"
 end
+
+@womens_stores = Store.where( "womens_apparel = true AND annual_revenue < 1000000" )
+@womens_stores.each do |store|
+  puts "#{store.name} has an annual revenue of #{store.annual_revenue}"
+end
